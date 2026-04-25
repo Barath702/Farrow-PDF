@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RedReader - History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#410001",
+                        "surface-tint": "#ffb4aa",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#474746",
+                        "surface-bright": "#3a3939",
+                        "error": "#ffb4ab",
+                        "on-primary": "#690003",
+                        "tertiary-fixed-dim": "#a7c8ff",
+                        "outline": "#af8782",
+                        "tertiary": "#a7c8ff",
+                        "surface-dim": "#131313",
+                        "primary": "#ffb4aa",
+                        "primary-container": "#e50914",
+                        "on-primary-fixed-variant": "#930007",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary": "#003061",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-tertiary-container": "#f8f9ff",
+                        "secondary": "#c8c6c5",
+                        "on-primary-container": "#fff7f6",
+                        "tertiary-container": "#0072d7",
+                        "surface": "#131313",
+                        "background": "#131313",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed": "#ffdad5",
+                        "outline-variant": "#5e3f3b",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-surface-variant": "#e9bcb6",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-fixed-variant": "#004689",
+                        "on-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353534",
+                        "surface-container": "#201f1f",
+                        "tertiary-fixed": "#d5e3ff",
+                        "inverse-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-secondary": "#313030",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#c0000c",
+                        "on-tertiary-fixed": "#001b3c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body antialiased min-h-screen flex flex-col pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-xl shadow-none">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<button class="text-[#E5E2E1] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-2xl font-bold tracking-tighter text-[#E50914] font-headline">RedReader</h1>
+<button class="text-[#E5E2E1] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 mt-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
+<!-- Header Section -->
+<section class="mb-12 md:mt-8">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-2">History</h2>
+<p class="text-on-secondary-container font-body text-sm md:text-base">Your recent reading activity</p>
+</section>
+<!-- Continue Reading (Horizontal Scroll) -->
+<section class="mb-12">
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-6">Continue Reading</h3>
+<div class="flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
+<!-- Card 1 -->
+<div class="snap-start shrink-0 w-64 bg-surface-container-low rounded-xl overflow-hidden relative group">
+<div class="h-32 bg-surface-container-high relative">
+<img alt="Cover" class="w-full h-full object-cover opacity-60" data-alt="abstract architectural forms in dark grey and crimson red lighting, dramatic shadows, modern minimalist style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt5nV4Lyq7423wM4QoxMgQm0kXnYH0kMaXsat-lOb5EqeP_MGtzfHWAOkHsPkWie7RNYSiHKsiidgeAKxqMayQfy4WAKMg_7gzLs3r47Q4465JQ5WnQBsMJwMJz0FYdn5y1bAes0pjv75r9ee-hzb35Te9xEQebCXJpN9fCN5ZcftsahfJfMe24g4j3CHYDZNVeoF80XkTV_KtvJA1o06zRaxLh8Zh3tIdZLGJgiAHRQ3RdvgQ6R9ZlPushLY1Ukx0y93oSKlprSs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+</div>
+<div class="p-4">
+<h4 class="font-headline font-semibold text-on-surface text-lg truncate mb-1">Neuromancer_Draft_v2.pdf</h4>
+<p class="font-body text-on-secondary-container text-xs mb-4">William Gibson • Pg 142</p>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mb-2">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 65%"></div>
+</div>
+<p class="font-body text-on-surface-variant text-[10px] text-right">65%</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="snap-start shrink-0 w-64 bg-surface-container-low rounded-xl overflow-hidden relative group">
+<div class="h-32 bg-surface-container-high relative">
+<img alt="Cover" class="w-full h-full object-cover opacity-60" data-alt="dark abstract cyber tech pattern with glowing red accents, circuit board aesthetic, deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnrjHXZGfhVy1c9NUkugL4xzSDAUmTfxn-U3jCeqL4fM9Rf51PrPpdPMQbhQwR74hOXviV1qzTv5LHpFjyv1fJJhwEb4HWm3Nze6hGh7YG5dGhHU8JlLCDOANFdIwq0nuSsGzmrA97rT4X8IvgPoNmurjB0S-Rx3PGNH1I0RXjWoj_bta-RhdKVUM6JQu3D5IoHNwh93r35jLZgLOkzuGHqMdv3MHO_RpTckidAa_Agt_p-2JQcQvpUJUCSsBF70SrcdYUUvpAOuQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+</div>
+<div class="p-4">
+<h4 class="font-headline font-semibold text-on-surface text-lg truncate mb-1">Design_Systems_2024.pdf</h4>
+<p class="font-body text-on-secondary-container text-xs mb-4">Smashing Mag • Pg 32</p>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mb-2">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 15%"></div>
+</div>
+<p class="font-body text-on-surface-variant text-[10px] text-right">15%</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="snap-start shrink-0 w-64 bg-surface-container-low rounded-xl overflow-hidden relative group">
+<div class="h-32 bg-surface-container-high relative">
+<img alt="Cover" class="w-full h-full object-cover opacity-60" data-alt="close up of old textured paper, dark moody lighting, vintage manuscript aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7u1LSJplTNmT0-XfDhrBUMSiRsNZa_KWfeARTZN0xmA_YCcUI0mnnw6wr5I5XSQOUkSu4Ql2sLGhhPKoprZGiZHzeJ0alFJ7AWAsSXQ3p0WXUdEgf70ttfoiENjF0s5nSh66sdEQaWGQYy33yrEevN7iBWwmZg9o5NvYS_KEStx9dyvqS7HX_b60_gmnzaqY7Nn8cdJ8vgzkhEI2ZKEvMIMnyFyFsLEQCvSvxMo2rJOZ-6r3i4GS0PnTRIg8gB6aqU9P8LUQgWOo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+</div>
+<div class="p-4">
+<h4 class="font-headline font-semibold text-on-surface text-lg truncate mb-1">The_Art_of_War.pdf</h4>
+<p class="font-body text-on-secondary-container text-xs mb-4">Sun Tzu • Pg 89</p>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mb-2">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 88%"></div>
+</div>
+<p class="font-body text-on-surface-variant text-[10px] text-right">88%</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Sections -->
+<div class="space-y-12">
+<!-- Today -->
+<section>
+<h3 class="text-sm font-headline font-semibold text-on-secondary-container uppercase tracking-wider mb-4">Today</h3>
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 p-3 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="w-12 h-16 bg-surface-container-highest rounded flex-shrink-0 overflow-hidden relative">
+<img alt="Thumbnail" class="w-full h-full object-cover opacity-80" data-alt="smooth liquid gradient flowing from black to deep crimson, elegant dark aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQhUOFHvS8yzKUS-EMOPIsX-Yc79G3-3DelMUAcYwddhhg3lldmJ8HsLc34m1kxaefm-EAnkvSFZGwwvpaGXLZjFKGCoJTarM5PsOjoYYoTRpjRcZoTn94E9gpS5MTk_jnXI6agcA5tDM_ca0ikO8-g29SOOqK3SMvSTREa8wJanHNoZsQ4rkoU8MTuDafecsWFCXwwSI7rjyRR3CD-tJtzW64cdI2gnCrK3qsCXIGbQWTMqke7URSYXdhZeKQcD7EqIMqaI7gV54"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline font-medium text-on-surface text-base truncate group-hover:text-primary-container transition-colors">Project_Apollo_Specs_Final.pdf</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body text-on-secondary-container text-xs">Pg 12 of 45</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-highest"></span>
+<span class="font-body text-on-secondary-container text-xs">2 hours ago</span>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 p-3 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="w-12 h-16 bg-surface-container-highest rounded flex-shrink-0 overflow-hidden relative">
+<img alt="Thumbnail" class="w-full h-full object-cover opacity-80" data-alt="dark atmospheric minimal texture, subtle red lighting accents, grainy shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCQ057h3JuJPb1q31TcfybCHIgaPvsc7ay4lJW6Idp3sk9jxSiPikBjHjUBx9_vw3iLxee7NkHm3LMjUsnX0vpAkYMDQZ-LmtI7q8t-fVnXkG1BFvalhjbkuCENd8jfXPpfnbYPRlBDym9E7m6TSqV7HxL5CePEqkL5WjFviSA5PStam7ZLRzJQZCOU6IyUDZ9T_XSDHh0VC0Lk_W-gmwFF-8wyNP_3EhVq5en7DF4GE6tJfsHSpkyVwmgS3u32PaRyIdbT2a5nbo"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline font-medium text-on-surface text-base truncate group-hover:text-primary-container transition-colors">Q3_Financial_Report.pdf</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body text-on-secondary-container text-xs">Pg 1 of 120</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-highest"></span>
+<span class="font-body text-on-secondary-container text-xs">5 hours ago</span>
+</div>
+</div>
+<button class="p-2 text-primary-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Yesterday -->
+<section>
+<h3 class="text-sm font-headline font-semibold text-on-secondary-container uppercase tracking-wider mb-4">Yesterday</h3>
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 p-3 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="w-12 h-16 bg-surface-container-highest rounded flex-shrink-0 overflow-hidden relative">
+<div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-opacity-50">description</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline font-medium text-on-surface text-base truncate group-hover:text-primary-container transition-colors">Client_Contract_Signed.pdf</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body text-on-secondary-container text-xs">Pg 4 of 4</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-highest"></span>
+<span class="font-body text-on-secondary-container text-xs">Yesterday, 4:30 PM</span>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Last 7 Days -->
+<section>
+<h3 class="text-sm font-headline font-semibold text-on-secondary-container uppercase tracking-wider mb-4">Last 7 Days</h3>
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 p-3 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="w-12 h-16 bg-surface-container-highest rounded flex-shrink-0 overflow-hidden relative">
+<img alt="Thumbnail" class="w-full h-full object-cover opacity-80" data-alt="minimalist architectural geometry, black and white with stark contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW4moEnOmZNwGFB99iDPG42jsTAeQKMfD5ZKqfuMd0_4HOBQ4hEqy7CNok17g_qMjzWdOyG7MXjw31Nt6YaHn0jHZruqGO5aofsFykPpu2ugMUgltd9X6yiCPfZZu8HeyisWBiVrAdAKMusrXkLBXc8-4UhcFyn6RtehWw7LRAZ1o39yhnv6o1Evkir8lTDpA4BceP_Ic9u5B4PkGsA_SimJkkWaSDwZuHpZfx7bhLZDVPSSkDJ_nXTE_RtVvvKw2d4AQ2SmzI7Vw"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline font-medium text-on-surface text-base truncate group-hover:text-primary-container transition-colors">UI_UX_Guidelines_V3.pdf</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body text-on-secondary-container text-xs">Pg 55 of 80</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-highest"></span>
+<span class="font-body text-on-secondary-container text-xs">Oct 24</span>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 p-3 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="w-12 h-16 bg-surface-container-highest rounded flex-shrink-0 overflow-hidden relative">
+<div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-opacity-50">description</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline font-medium text-on-surface text-base truncate group-hover:text-primary-container transition-colors">Meeting_Notes_Oct.pdf</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body text-on-secondary-container text-xs">Pg 2 of 5</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-highest"></span>
+<span class="font-body text-on-secondary-container text-xs">Oct 22</span>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center gap-8 py-3 bg-[#1C1B1B]/90 backdrop-blur-xl rounded-full mb-6 mx-auto w-fit px-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] border border-white/5">
+<a aria-label="Library" class="flex flex-col items-center gap-1 text-[#E5E2E1]/40 hover:text-[#E5E2E1] transition-colors p-2" href="#">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</a>
+<a aria-current="page" aria-label="History" class="flex flex-col items-center gap-1 text-[#E50914] scale-110 p-2 relative" href="#">
+<div class="absolute inset-0 bg-primary-container/20 rounded-full blur-md"></div>
+<span class="material-symbols-outlined text-2xl relative z-10" style="font-variation-settings: 'FILL' 1;">history</span>
+</a>
+<a aria-label="Starred" class="flex flex-col items-center gap-1 text-[#E5E2E1]/40 hover:text-[#E5E2E1] transition-colors p-2" href="#">
+<span class="material-symbols-outlined text-2xl">grade</span>
+</a>
+<a aria-label="Settings" class="flex flex-col items-center gap-1 text-[#E5E2E1]/40 hover:text-[#E5E2E1] transition-colors p-2" href="#">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</a>
+</nav>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</body></html>

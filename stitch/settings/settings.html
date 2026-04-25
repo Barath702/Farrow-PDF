@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - RedReader</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#003061",
+                        "inverse-primary": "#c0000c",
+                        "tertiary-fixed-dim": "#a7c8ff",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-fixed": "#ffdad5",
+                        "on-secondary": "#313030",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-fixed-variant": "#004689",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-container": "#0072d7",
+                        "secondary-container": "#474746",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#001b3c",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary": "#c8c6c5",
+                        "outline": "#af8782",
+                        "surface-tint": "#ffb4aa",
+                        "on-secondary-container": "#b7b5b4",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#a7c8ff",
+                        "on-tertiary-container": "#f8f9ff",
+                        "on-surface-variant": "#e9bcb6",
+                        "on-primary-container": "#fff7f6",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353534",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed": "#d5e3ff",
+                        "outline-variant": "#5e3f3b",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed": "#410001",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353534",
+                        "surface-bright": "#3a3939",
+                        "on-primary-fixed-variant": "#930007",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface": "#131313",
+                        "primary-container": "#e50914",
+                        "primary": "#ffb4aa",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "on-primary": "#690003",
+                        "surface-container-high": "#2a2a2a",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom range slider styling to match design system */
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #e50914; /* primary-container */
+            cursor: pointer;
+            margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+            box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
+            transition: all 0.2s ease-in-out;
+        }
+        input[type=range]::-webkit-slider-thumb:hover {
+            box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);
+            transform: scale(1.1);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #353534; /* surface-container-highest */
+            border-radius: 2px;
+        }
+        /* Custom toggle switch styling */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #e50914; /* primary-container */
+            background-image: none !important;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #e50914; /* primary-container */
+        }
+        .toggle-checkbox:checked + .toggle-label:before {
+            transform: translateX(100%);
+            background-color: #fff7f6; /* on-primary-container */
+            content: ''; /* Ensure no icon content is present */
+        }
+    </style>
+<style>
+        /* Custom range slider styling to match design system */
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #e50914; /* primary-container */
+            cursor: pointer;
+            margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+            box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
+            transition: all 0.2s ease-in-out;
+        }
+        input[type=range]::-webkit-slider-thumb:hover {
+            box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);
+            transform: scale(1.1);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #353534; /* surface-container-highest */
+            border-radius: 2px;
+        }
+        /* Custom toggle switch styling */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #e50914; /* primary-container */
+            background-image: none !important;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #e50914; /* primary-container */
+        }
+        .toggle-checkbox:checked + .toggle-label:before {
+            transform: translateX(100%);
+            background-color: #fff7f6; /* on-primary-container */
+            content: ''; /* Ensure no icon content is present */
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body antialiased min-h-screen flex flex-col md:flex-row overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- NavigationDrawer (Hidden on Mobile, Visible on md+) -->
+<nav class="hidden md:flex fixed left-0 top-0 h-screen w-72 flex-col p-4 bg-[#0E0E0E] shadow-[40px_0_60px_-15px_rgba(0,0,0,0.5)] z-40 rounded-r-2xl font-['Manrope'] text-sm tracking-wide text-[#E50914]">
+<div class="mb-12 mt-4 px-4">
+<h1 class="font-['Space_Grotesk'] text-xl font-bold text-[#E50914] tracking-tight">RedReader</h1>
+</div>
+<div class="no-border space-y-2 flex-1">
+<a class="flex items-center gap-4 text-[#E5E2E1]/60 px-4 py-3 hover:bg-[#1C1B1B] rounded-full Transition-all duration-300 ease-in-out group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">grid_view</span>
+<span>Library</span>
+</a>
+<a class="flex items-center gap-4 text-[#E5E2E1]/60 px-4 py-3 hover:bg-[#1C1B1B] rounded-full Transition-all duration-300 ease-in-out group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">history</span>
+<span>Recent</span>
+</a>
+<a class="flex items-center gap-4 text-[#E5E2E1]/60 px-4 py-3 hover:bg-[#1C1B1B] rounded-full Transition-all duration-300 ease-in-out group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">grade</span>
+<span>Starred</span>
+</a>
+<a class="flex items-center gap-4 bg-[#E50914] text-white rounded-full mx-2 px-4 py-3 Transition-all duration-300 ease-in-out shadow-[0_4px_12px_rgba(229,9,20,0.3)]" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+</div>
+</nav>
+<!-- TopAppBar (Visible on Mobile, Hidden on md+) -->
+<header class="md:hidden flex justify-between items-center px-6 py-4 w-full bg-[#131313]/80 backdrop-blur-[24px] text-[#E50914] font-['Space_Grotesk'] font-medium tracking-tight docked full-width top-0 shadow-none z-50 sticky">
+<button class="text-[#E5E2E1] hover:bg-[#3A3939] transition-colors p-2 rounded-full Active: scale-95 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-2xl font-bold tracking-tighter text-[#E5E2E1]">RedReader</h1>
+<button class="text-[#E5E2E1] hover:bg-[#3A3939] transition-colors p-2 rounded-full Active: scale-95 transition-transform">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-72 flex flex-col p-6 md:p-12 xl:p-24 w-full max-w-5xl mx-auto">
+<header class="mb-16 md:mb-24 mt-8 md:mt-0">
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface tracking-tight mb-2">Settings</h2>
+<p class="font-body text-on-secondary-container text-sm md:text-base">Configure your nocturnal reading experience.</p>
+</header>
+<div class="space-y-12">
+<!-- Preferences Section -->
+<section>
+<h3 class="font-headline text-sm uppercase tracking-widest text-primary mb-6 ml-4">Preferences</h3>
+<div class="bg-surface-container-low rounded-xl md:rounded-2xl flex flex-col overflow-hidden">
+<!-- Night Mode Toggle -->
+<div class="flex items-center justify-between p-6 md:px-8 hover:bg-surface-container-high transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dark_mode</span>
+</div>
+<div>
+<p class="font-body font-medium text-on-surface text-base">Night Mode</p>
+<p class="font-label text-xs text-on-secondary-container mt-1">Force dark theme globally</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-full h-full cursor-pointer z-10 top-0 left-0 opacity-0" id="night-mode-toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer relative before:content-[''] before:absolute before:w-6 before:h-6 before:bg-on-surface before:rounded-full before:transition-transform before:duration-200 before:ease-in-out" for="night-mode-toggle"></label>
+</div>
+</div>
+<!-- Divider via tonal shift (visual only, no lines) -->
+<div class="h-1 bg-surface w-full opacity-50"></div>
+<!-- Smooth Scrolling Toggle -->
+<div class="flex items-center justify-between p-6 md:px-8 hover:bg-surface-container-high transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined">swipe_up</span>
+</div>
+<div>
+<p class="font-body font-medium text-on-surface text-base">Smooth Scrolling</p>
+<p class="font-label text-xs text-on-secondary-container mt-1">Enable kinetic scrolling animation</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-full h-full cursor-pointer z-10 top-0 left-0 opacity-0" id="smooth-scroll-toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer relative before:content-[''] before:absolute before:w-6 before:h-6 before:bg-on-surface before:rounded-full before:transition-transform before:duration-200 before:ease-in-out" for="smooth-scroll-toggle"></label>
+</div>
+</div>
+<div class="h-1 bg-surface w-full opacity-50"></div>
+<!-- Remember Last Page Toggle -->
+<div class="flex items-center justify-between p-6 md:px-8 hover:bg-surface-container-high transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined">bookmark_added</span>
+</div>
+<div>
+<p class="font-body font-medium text-on-surface text-base">Remember last page</p>
+<p class="font-label text-xs text-on-secondary-container mt-1">Resume reading where you left off</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-full h-full cursor-pointer z-10 top-0 left-0 opacity-0" id="remember-page-toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer relative before:content-[''] before:absolute before:w-6 before:h-6 before:bg-on-surface before:rounded-full before:transition-transform before:duration-200 before:ease-in-out" for="remember-page-toggle"></label>
+</div>
+</div>
+</div>
+</section>
+<!-- Interaction Section -->
+<!-- About Section -->
+<section>
+<h3 class="font-headline text-sm uppercase tracking-widest text-primary mb-6 ml-4">About</h3>
+<div class="bg-surface-container-low rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:bg-surface-container-high transition-colors duration-300">
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.2)]">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">book_4</span>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold text-on-surface tracking-tight mb-1">RedReader</h4>
+<p class="font-label text-xs text-on-secondary-container uppercase tracking-wider">Version 2.4.1 (Nocturnal Build)</p>
+</div>
+</div>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface font-body text-sm px-6 py-3 rounded-full transition-all duration-300 flex items-center gap-2 group">
+<span>Check for Updates</span>
+<span class="material-symbols-outlined text-[18px] group-hover:text-primary transition-colors">system_update_alt</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Bottom padding for mobile nav clearance -->
+<div class="h-24 md:h-8 w-full"></div>
+</main>
+<!-- BottomNavBar (Visible on Mobile, Hidden on md+) -->
+<nav class="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center gap-8 py-3 bg-[#1C1B1B]/90 backdrop-blur-xl rounded-full mb-6 mx-auto w-fit px-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] border border-white/5">
+<a aria-label="Library" class="flex flex-col items-center gap-1 text-[#E5E2E1]/40 hover:text-[#E5E2E1] transition-colors p-2" href="#"><span class="material-symbols-outlined text-2xl">grid_view</span></a>
+<a aria-label="History" class="flex flex-col items-center gap-1 text-[#E5E2E1]/40 hover:text-[#E5E2E1] transition-colors p-2" href="#"><span class="material-symbols-outlined text-2xl">history</span></a>
+<a aria-label="Saved" class="flex flex-col items-center gap-1 text-[#E5E2E1]/40 hover:text-[#E5E2E1] transition-colors p-2" href="#">
+<span class="material-symbols-outlined text-2xl">grade</span>
+</a>
+<a aria-current="page" aria-label="Settings" class="flex flex-col items-center gap-1 text-[#E50914] scale-110 p-2 relative" href="#">
+<div class="absolute inset-0 bg-primary-container/20 rounded-full blur-md"></div>
+<span class="material-symbols-outlined text-2xl relative z-10" style="font-variation-settings: 'FILL' 1;">settings</span>
+</a>
+</nav>
+<script>
+        // Custom toggle logic for the CSS-only styling above to ensure it visualizes correctly if clicked
+        document.querySelectorAll('.toggle-label').forEach(label => {
+            label.addEventListener('click', function(e) {
+                const checkbox = document.getElementById(this.getAttribute('for'));
+                checkbox.checked = !checkbox.checked;
+                e.preventDefault();
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RedReader - Bookmarks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#003061",
+                        "inverse-primary": "#c0000c",
+                        "tertiary-fixed-dim": "#a7c8ff",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-fixed": "#ffdad5",
+                        "on-secondary": "#313030",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-fixed-variant": "#004689",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-container": "#0072d7",
+                        "secondary-container": "#474746",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#001b3c",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary": "#c8c6c5",
+                        "outline": "#af8782",
+                        "surface-tint": "#ffb4aa",
+                        "on-secondary-container": "#b7b5b4",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#a7c8ff",
+                        "on-tertiary-container": "#f8f9ff",
+                        "on-surface-variant": "#e9bcb6",
+                        "on-primary-container": "#fff7f6",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353534",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed": "#d5e3ff",
+                        "outline-variant": "#5e3f3b",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed": "#410001",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353534",
+                        "surface-bright": "#3a3939",
+                        "on-primary-fixed-variant": "#930007",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface": "#131313",
+                        "primary-container": "#e50914",
+                        "primary": "#ffb4aa",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "on-primary": "#690003",
+                        "surface-container-high": "#2a2a2a",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-white min-h-screen flex flex-col md:flex-row overflow-x-hidden">
+<!-- TopAppBar for Mobile/Tablet -->
+<header class="md:hidden flex justify-between items-center px-6 py-4 w-full bg-[#131313]/80 backdrop-blur-[24px] sticky full-width top-0 z-40">
+<button aria-label="Menu" class="text-[#E5E2E1] hover:bg-[#3A3939] transition-colors p-2 rounded-full focus:outline-none">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['Space_Grotesk'] text-2xl font-bold tracking-tighter text-[#E5E2E1]">RedReader</h1>
+<button aria-label="Search" class="text-[#E5E2E1] hover:bg-[#3A3939] transition-colors p-2 rounded-full focus:outline-none">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</header>
+<!-- NavigationDrawer for Desktop -->
+<nav class="hidden md:flex fixed left-0 top-0 h-screen w-72 flex-col p-4 bg-[#0E0E0E] z-30 shadow-[40px_0_60px_-15px_rgba(0,0,0,0.5)] rounded-r-2xl">
+<div class="px-6 py-8 mb-4">
+<h1 class="font-['Space_Grotesk'] text-xl font-bold text-[#E50914] tracking-tight">RedReader</h1>
+</div>
+<ul class="flex flex-col space-y-2 font-['Manrope'] text-sm tracking-wide flex-1">
+<li>
+<a class="flex items-center gap-4 text-[#E5E2E1]/60 px-4 py-3 hover:bg-[#1C1B1B] rounded-full transition-all duration-300 ease-in-out group" href="#">
+<span class="material-symbols-outlined group-hover:text-[#E50914] transition-colors" data-icon="grid_view">grid_view</span>
+                    Library
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-[#E5E2E1]/60 px-4 py-3 hover:bg-[#1C1B1B] rounded-full transition-all duration-300 ease-in-out group" href="#">
+<span class="material-symbols-outlined group-hover:text-[#E50914] transition-colors" data-icon="history">history</span>
+                    Recent
+                </a>
+</li>
+<li>
+<a aria-current="page" class="flex items-center gap-4 bg-[#E50914] text-white rounded-full mx-2 px-4 py-3 transition-all duration-300 ease-in-out shadow-[0_4px_16px_rgba(229,9,20,0.3)]" href="#">
+<span class="material-symbols-outlined" data-icon="grade" style="font-variation-settings: 'FILL' 1;">grade</span>
+                    Starred
+                </a>
+</li>
+</ul>
+<div class="mt-auto pt-4">
+<a class="flex items-center gap-4 text-[#E5E2E1]/60 px-4 py-3 hover:bg-[#1C1B1B] rounded-full transition-all duration-300 ease-in-out group font-['Manrope'] text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined group-hover:text-[#E5E2E1]" data-icon="settings">settings</span>
+                Settings
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-72 p-6 md:p-12 lg:p-24 min-h-screen bg-surface-container-lowest flex flex-col relative">
+<!-- Subtle background ambient light -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<!-- Header Section -->
+<header class="mb-12 md:mb-16">
+<div class="flex items-end justify-between border-b border-outline-variant/15 pb-6">
+<div>
+<span class="font-label text-on-surface-variant text-xs uppercase tracking-[0.2em] mb-3 block">Curated Collection</span>
+<h2 class="font-headline text-4xl md:text-5xl lg:text-6xl text-on-surface font-medium tracking-tighter">Bookmarks</h2>
+</div>
+<div class="text-right hidden sm:block">
+<span class="font-headline text-primary-container text-4xl font-bold leading-none block tracking-tighter">12</span>
+<span class="font-label text-on-surface-variant text-xs uppercase tracking-widest mt-1 block">Saved Pages</span>
+</div>
+</div>
+</header>
+<!-- Bookmarks List (Bento/Asymmetric Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 auto-rows-max pb-32 md:pb-12">
+<!-- Bookmark Item 1 (Active/Highlighted) -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:bg-surface-container-high col-span-1 md:col-span-2 xl:col-span-1 xl:row-span-2 shadow-[0_8px_32px_rgba(0,0,0,0.2)]">
+<!-- Active Indicator Glow -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-transparent pointer-events-none opacity-100 transition-opacity"></div>
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container shadow-[0_0_12px_rgba(229,9,20,0.6)]"></div>
+<div class="p-6 flex justify-between items-start z-10 relative">
+<div>
+<span class="font-headline text-3xl font-bold text-on-surface tracking-tighter block mb-1">Page 15</span>
+<h3 class="font-body text-sm text-on-surface-variant font-medium leading-relaxed max-w-[80%]">The Architecture of Silence: Monolithic Forms in Brutalist Design</h3>
+</div>
+<button aria-label="Remove Bookmark" class="text-primary-container p-2 rounded-full hover:bg-surface-bright transition-colors focus:outline-none">
+<span class="material-symbols-outlined" data-icon="bookmark" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="relative flex-1 min-h-[200px] mt-auto mx-6 mb-6 overflow-hidden rounded-lg shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
+<img alt="Preview of Page 15" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] contrast-125 brightness-90" data-alt="abstract brutalist concrete architecture interior with dramatic dramatic light and deep shadows high contrast black and white style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Fpktp2C508T7xE6XolyeuPmvKqIuPB58QBE2OeRSYOX6yQwvTaNbYVt3PJkSwvCRn8BTw9V_I_yikX-D0oy6tigokB0aVhnbRBS1UMbhdKI05w8uI-5ppU8LCtt2VhJ8CgGHakNSnciKoEJdU3DgIQU1SEcofrS4C3FBLGF2fVr2_vI4LVJcQ67pUfzK4Tt2iJkt_BS2_jFMM39gQKqjFnApqTzMGV01IYuZFTNMAg-krV5s5de1Qvfee5V6BgvddSuC54jh5R0"/>
+</div>
+</article>
+<!-- Bookmark Item 2 -->
+<article class="group relative flex flex-col sm:flex-row items-center bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:bg-surface-container-high">
+<div class="relative w-full sm:w-1/3 h-48 sm:h-full min-h-[140px] overflow-hidden sm:rounded-l-xl">
+<img alt="Preview of Page 42" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter opacity-80 group-hover:opacity-100" data-alt="minimalist typographic poster design with bold sans-serif text overlapping geometric shapes in dark moody colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBbVvY_g5dPu444o-1mDRRZXGvyP148NIciQlZQLvJl8PzocCw2ZTq7oteVh1nzJHAdNcCaYaMEkI3mC6lLnH3jC2of72Sx6SA7UgL0YsguU-3yNYicnNJR0rPKJJe3SaLVOkeOwLhHTIoFkWtPXWp0Mo_VbfYSunBqr4Y3AuJlxZmEYFeoXGM9jh-oV-66oEmu41DvWT0YiY7TI6F_9xEegvivM_EKp4A2a_-d0ko1gTKu5A6S0uVyTasCpjGVp4SnCWUp_dsOBs"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-surface-container-low hidden sm:block"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent sm:hidden"></div>
+</div>
+<div class="p-6 sm:pl-4 flex-1 flex justify-between items-center w-full z-10 relative">
+<div>
+<span class="font-headline text-xl font-medium text-on-surface tracking-tight block mb-1">Page 42</span>
+<h3 class="font-body text-xs text-on-surface-variant leading-snug line-clamp-2">Typography &amp; Grid Systems in Swiss Design</h3>
+</div>
+<button aria-label="Remove Bookmark" class="text-on-surface-variant hover:text-primary-container p-2 rounded-full hover:bg-surface-bright transition-colors focus:outline-none ml-2">
+<span class="material-symbols-outlined" data-icon="bookmark" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</article>
+<!-- Bookmark Item 3 -->
+<article class="group relative flex flex-col sm:flex-row items-center bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:bg-surface-container-high">
+<div class="relative w-full sm:w-1/3 h-48 sm:h-full min-h-[140px] overflow-hidden sm:rounded-l-xl">
+<img alt="Preview of Page 89" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter opacity-80 group-hover:opacity-100" data-alt="dark abstract liquid flowing shapes with metallic sheen and subtle red highlights on deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAGDECjtcGwY8Jxh3MizBhLLwqwfS716f47hPpq7ZejCKkON9qKXIouX_ELQY8I0f3IdoyyMYdL7TR1KMvOdVbOAhRPLVWDTq7ieTfSuTZX9uFg8Xqzph0rd_cXt9Napspv0I2-OS6tvecqYNKSwhxrUIsGxLhx94qYJSAOChOy9Ppx2kWAcnjhOx4beO_tb5ccBPP0w7ivlj5jRth94S5t0xLPC4A7zjBDLp7I7fICnaW1e3WGWsntTvzurYEuD4kpkn1vyTCMtM"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-surface-container-low hidden sm:block"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent sm:hidden"></div>
+</div>
+<div class="p-6 sm:pl-4 flex-1 flex justify-between items-center w-full z-10 relative">
+<div>
+<span class="font-headline text-xl font-medium text-on-surface tracking-tight block mb-1">Page 89</span>
+<h3 class="font-body text-xs text-on-surface-variant leading-snug line-clamp-2">Material Studies: Liquid Metal &amp; Reflections</h3>
+</div>
+<button aria-label="Remove Bookmark" class="text-on-surface-variant hover:text-primary-container p-2 rounded-full hover:bg-surface-bright transition-colors focus:outline-none ml-2">
+<span class="material-symbols-outlined" data-icon="bookmark" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</article>
+<!-- Bookmark Item 4 -->
+<article class="group relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:bg-surface-container-low border border-outline-variant/15 hover:border-outline-variant/30">
+<div class="p-5 flex justify-between items-start z-10 relative border-b border-outline-variant/10">
+<div>
+<span class="font-headline text-lg font-medium text-on-surface tracking-tight block">Page 112</span>
+</div>
+<button aria-label="Remove Bookmark" class="text-on-surface-variant hover:text-primary-container p-1 rounded-full hover:bg-surface-bright transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-sm" data-icon="bookmark" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="relative h-32 w-full overflow-hidden bg-surface-container">
+<img alt="Preview of Page 112" class="absolute inset-0 w-full h-full object-cover object-left-top opacity-50 group-hover:opacity-80 transition-opacity duration-500" data-alt="code editor interface on dark monitor glowing text matrix style green and blue syntax highlighting close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEbuzqyRddfnnhl9yV5mQ1rrou8rUe_cdwkenuiRVRFqOj3GBHwWIKzTRTKA5gXHcnPzDX0tSYVpFaUkaxL48GMkuS842yQwtk6zwCd2Mhu0ZNAMby4VATrosG1EuPfDrp1t-DVWPDoC6gnpCKp672-oe7EezFZTDomLJQyPRQNiTWsTWz5ESbO2gMTLwnsXcRBatkI6GZw9w4Wf7onhjHy60BTZXtHt-tVnO6l17y_ArUB0_QEHD3hOnHk1iu5c1jxN4Wb4xf2Tc"/>
+</div>
+<div class="p-4 bg-surface-container-lowest">
+<h3 class="font-body text-xs text-on-surface-variant leading-snug line-clamp-1">Appendix C: Syntax Highlighting Algorithms</h3>
+</div>
+</article>
+<!-- Bookmark Item 5 -->
+<article class="group relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:bg-surface-container-low border border-outline-variant/15 hover:border-outline-variant/30">
+<div class="p-5 flex justify-between items-start z-10 relative border-b border-outline-variant/10">
+<div>
+<span class="font-headline text-lg font-medium text-on-surface tracking-tight block">Page 14</span>
+</div>
+<button aria-label="Remove Bookmark" class="text-on-surface-variant hover:text-primary-container p-1 rounded-full hover:bg-surface-bright transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-sm" data-icon="bookmark" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="relative h-32 w-full overflow-hidden bg-surface-container">
+<img alt="Preview of Page 14" class="absolute inset-0 w-full h-full object-cover object-center opacity-50 group-hover:opacity-80 transition-opacity duration-500 filter sepia-[.3]" data-alt="vintage scientific diagram of celestial mechanics solar system drawn on aged parchment paper sepia tone dark edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb3vQbRPhvchPDZr2PjkliIa4HFML4ciNlNvXqiWGBzJWcYn-4BFOT9YtMZo_pWCUmwSDh78yde6fc4sRG81oRCscKI5Np06XMHGGa-rRyM667lbceJjvkRDRny5I4YGxAgh3Xa2_OqbCr2HpfUxFuEDMy1Mx5wWkKtHn8tVmz_DyTaf2OCJRK8VDFyzbd9Jq3x8-Hj5tdZ14XeU1EX0XZFFPte6YdOI_W_3fKpwSOWr2526Y9vDmAssviOToIrZE7jynXg9a73no"/>
+</div>
+<div class="p-4 bg-surface-container-lowest">
+<h3 class="font-body text-xs text-on-surface-variant leading-snug line-clamp-1">Introduction: Celestial Mechanics</h3>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center gap-8 py-3 bg-[#1C1B1B]/90 backdrop-blur-xl rounded-full mb-6 mx-auto w-fit px-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] border border-white/5">
+<a aria-label="Library" class="flex flex-col items-center gap-1 text-[#E5E2E1]/40 hover:text-[#E5E2E1] transition-colors p-2" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</a>
+<a aria-label="Recent" class="flex flex-col items-center gap-1 text-[#E5E2E1]/40 hover:text-[#E5E2E1] transition-colors p-2" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</a>
+<a aria-current="page" aria-label="Starred" class="flex flex-col items-center gap-1 text-[#E50914] scale-110 p-2 relative" href="#">
+<div class="absolute inset-0 bg-primary-container/20 rounded-full blur-md"></div>
+<span class="material-symbols-outlined relative z-10" data-icon="grade" style="font-variation-settings: 'FILL' 1;">grade</span>
+</a>
+<a aria-label="Settings" class="flex flex-col items-center gap-1 text-[#E5E2E1]/40 hover:text-[#E5E2E1] transition-colors p-2" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</a>
+</nav>
+</body></html>
